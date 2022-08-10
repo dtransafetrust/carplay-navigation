@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		911B4A6C28A2818C00FCA996 /* MyCarPlayLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911B4A6B28A2818C00FCA996 /* MyCarPlayLib.framework */; };
-		911B4A6D28A2818C00FCA996 /* MyCarPlayLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 911B4A6B28A2818C00FCA996 /* MyCarPlayLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		911B4AB528A28C8D00FCA996 /* CarplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911B4AB428A28C8D00FCA996 /* CarplayView.xib */; };
+		9127BEA228A3551D003DB95E /* MyCarPlayLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */; };
+		9127BEA328A3551D003DB95E /* MyCarPlayLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C584EF2720EAADB000D1652C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584EF2520EAADB000D1652C /* Main.storyboard */; };
 		C584EF2920EAADB100D1652C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C584EF2820EAADB100D1652C /* Assets.xcassets */; };
 		C584EF2C20EAADB100D1652C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584EF2A20EAADB100D1652C /* LaunchScreen.storyboard */; };
@@ -18,13 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		911B4A6E28A2818C00FCA996 /* Embed Frameworks */ = {
+		9127BEA428A3551D003DB95E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				911B4A6D28A2818C00FCA996 /* MyCarPlayLib.framework in Embed Frameworks */,
+				9127BEA328A3551D003DB95E /* MyCarPlayLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,8 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		911B4A6B28A2818C00FCA996 /* MyCarPlayLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyCarPlayLib.framework; sourceTree = "<group>"; };
 		911B4AB428A28C8D00FCA996 /* CarplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarplayView.xib; sourceTree = "<group>"; };
+		9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyCarPlayLib.framework; path = "../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphonesimulator/MyCarPlayLib.framework"; sourceTree = "<group>"; };
 		C584EF1E20EAADB000D1652C /* CarplayNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarplayNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C584EF2120EAADB000D1652C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C584EF2320EAADB000D1652C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911B4A6C28A2818C00FCA996 /* MyCarPlayLib.framework in Frameworks */,
+				9127BEA228A3551D003DB95E /* MyCarPlayLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 		C584EF3420EAAE0400D1652C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				911B4A6B28A2818C00FCA996 /* MyCarPlayLib.framework */,
+				9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 				C584EF1A20EAADB000D1652C /* Sources */,
 				C584EF1B20EAADB000D1652C /* Frameworks */,
 				C584EF1C20EAADB000D1652C /* Resources */,
-				911B4A6E28A2818C00FCA996 /* Embed Frameworks */,
+				9127BEA428A3551D003DB95E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +342,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphonesimulator/",
+					"$(PROJECT_DIR)/../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphoneos/",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CarplayNavigationTesting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,6 +369,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphonesimulator/",
+					"$(PROJECT_DIR)/../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphoneos/",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CarplayNavigationTesting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

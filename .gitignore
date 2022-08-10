@@ -9,6 +9,7 @@ build/*
 xcuserdata
 *.xcuserstate
 *.xccheckout
+DerivedData
 
 Snapshots
 

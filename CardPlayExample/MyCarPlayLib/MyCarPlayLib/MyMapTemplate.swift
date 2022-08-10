@@ -18,6 +18,9 @@ open class MyMapTemplate: NSObject, CPApplicationDelegate, CPMapTemplateDelegate
     // MARK: - Needed to show initial storyboard
     public var window: UIWindow?
     
+    // MARK: - Private properties
+    var isShowHelloWorld: Bool = false
+    
     // MARK: - CPApplicationDelegate methods
     public func application(_ application: UIApplication, didConnectCarInterfaceController interfaceController: CPInterfaceController, to window: CPWindow) {
         print("[CARPLAY] CONNECTED TO CARPLAY!")
@@ -62,11 +65,11 @@ open class MyMapTemplate: NSObject, CPApplicationDelegate, CPMapTemplateDelegate
         let mapTemplate = CPMapTemplate()
         
         // Create the different CPBarButtons
-        let searchBarButton = createBarButton(.search)
+        let searchBarButton = createBarButton(.showTextButton)
         mapTemplate.leadingNavigationBarButtons = [searchBarButton]
         
-        let panningBarButton = createBarButton(.panning)
-        mapTemplate.trailingNavigationBarButtons = [panningBarButton]
+//        let panningBarButton = createBarButton(.panning)
+//        mapTemplate.trailingNavigationBarButtons = [panningBarButton]
         
         // Always show the NavigationBar
         mapTemplate.automaticallyHidesNavigationBar = false
@@ -77,9 +80,9 @@ open class MyMapTemplate: NSObject, CPApplicationDelegate, CPMapTemplateDelegate
     // MARK: - CPBarButton creation
     
     enum BarButtonType: String {
-        case search = "Search"
-        case panning = "Pan map"
-        case dismiss = "Dismiss"
+        case showTextButton = "Click"
+        case panning = "Hello World"
+        case dismiss = "I am Safetrust"
     }
     
     private func createBarButton(_ type: BarButtonType) -> CPBarButton {
@@ -87,13 +90,22 @@ open class MyMapTemplate: NSObject, CPApplicationDelegate, CPMapTemplateDelegate
             print("[CARPLAY] SEARCH MAP TEMPLATE \(button.title ?? "-") TAPPED")
             
             switch(type) {
-            case .dismiss:
+//            case .dismiss:
                 // Dismiss the map panning interface
-                self.mapTemplate?.dismissPanningInterface(animated: true)
-            case .panning:
+//                self.mapTemplate?.dismissPanningInterface(animated: true)
+//            case .panning:
                 // Enable the map panning interface and set the dismiss button
-                self.mapTemplate?.showPanningInterface(animated: true)
-                self.mapTemplate?.trailingNavigationBarButtons = [self.createBarButton(.dismiss)]
+//                self.mapTemplate?.showPanningInterface(animated: true)
+//                self.mapTemplate?.trailingNavigationBarButtons = [self.createBarButton(.dismiss)]
+            case .showTextButton:
+                if self.isShowHelloWorld {
+                    self.isShowHelloWorld = false
+                    self.mapTemplate?.trailingNavigationBarButtons = [self.createBarButton(.dismiss)]
+                } else {
+                    self.isShowHelloWorld = true
+                    self.mapTemplate?.trailingNavigationBarButtons = [self.createBarButton(.panning)]
+                }
+                
             default:
                 break
             }
