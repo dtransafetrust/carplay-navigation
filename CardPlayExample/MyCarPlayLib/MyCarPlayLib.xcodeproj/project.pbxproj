@@ -13,6 +13,8 @@
 		911B4A6528A280A600FCA996 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B4A6328A280A600FCA996 /* CustomNavigationViewController.swift */; };
 		911B4A6628A280A600FCA996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B4A6428A280A600FCA996 /* ViewController.swift */; };
 		911B4A6928A280E000FCA996 /* CarplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911B4A6828A280E000FCA996 /* CarplayView.xib */; };
+		91B5F65E28A4C20900BFE7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5F65D28A4C20900BFE7C2 /* SceneDelegate.swift */; };
+		91B5F66028A4C2C400BFE7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B5F65F28A4C2C400BFE7C2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		911B4A6328A280A600FCA996 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		911B4A6428A280A600FCA996 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		911B4A6828A280E000FCA996 /* CarplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarplayView.xib; sourceTree = "<group>"; };
+		91B5F65B28A4C14E00BFE7C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91B5F65D28A4C20900BFE7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		91B5F65F28A4C2C400BFE7C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +62,13 @@
 		911B4A5628A27DE600FCA996 /* MyCarPlayLib */ = {
 			isa = PBXGroup;
 			children = (
+				91B5F65F28A4C2C400BFE7C2 /* Main.storyboard */,
+				91B5F65B28A4C14E00BFE7C2 /* Info.plist */,
 				911B4A6A28A280E400FCA996 /* Views */,
 				911B4A6728A280AB00FCA996 /* ViewControllers */,
 				911B4A5728A27DE600FCA996 /* MyCarPlayLib.h */,
 				911B4A6128A27E1B00FCA996 /* MyMapTemplate.swift */,
+				91B5F65D28A4C20900BFE7C2 /* SceneDelegate.swift */,
 			);
 			path = MyCarPlayLib;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B5F66028A4C2C400BFE7C2 /* Main.storyboard in Resources */,
 				911B4A6928A280E000FCA996 /* CarplayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +183,7 @@
 				911B4A6628A280A600FCA996 /* ViewController.swift in Sources */,
 				911B4A6228A27E1B00FCA996 /* MyMapTemplate.swift in Sources */,
 				911B4A6528A280A600FCA996 /* CustomNavigationViewController.swift in Sources */,
+				91B5F65E28A4C20900BFE7C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,10 +322,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyCarPlayLib/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,10 +356,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MyCarPlayLib/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

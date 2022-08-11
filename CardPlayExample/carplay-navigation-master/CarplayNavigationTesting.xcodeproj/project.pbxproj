@@ -10,6 +10,8 @@
 		911B4AB528A28C8D00FCA996 /* CarplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911B4AB428A28C8D00FCA996 /* CarplayView.xib */; };
 		9127BEA228A3551D003DB95E /* MyCarPlayLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */; };
 		9127BEA328A3551D003DB95E /* MyCarPlayLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91B5F68C28A4D0B100BFE7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5F68B28A4D0B100BFE7C2 /* SceneDelegate.swift */; };
+		91B5F68E28A4D0CB00BFE7C2 /* CarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5F68D28A4D0CB00BFE7C2 /* CarPlaySceneDelegate.swift */; };
 		C584EF2720EAADB000D1652C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584EF2520EAADB000D1652C /* Main.storyboard */; };
 		C584EF2920EAADB100D1652C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C584EF2820EAADB100D1652C /* Assets.xcassets */; };
 		C584EF2C20EAADB100D1652C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584EF2A20EAADB100D1652C /* LaunchScreen.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		911B4AB428A28C8D00FCA996 /* CarplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarplayView.xib; sourceTree = "<group>"; };
 		9127BEA128A3551D003DB95E /* MyCarPlayLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyCarPlayLib.framework; path = "../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphonesimulator/MyCarPlayLib.framework"; sourceTree = "<group>"; };
+		91B5F68B28A4D0B100BFE7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		91B5F68D28A4D0CB00BFE7C2 /* CarPlaySceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlaySceneDelegate.swift; sourceTree = "<group>"; };
 		C584EF1E20EAADB000D1652C /* CarplayNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarplayNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C584EF2120EAADB000D1652C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C584EF2320EAADB000D1652C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,12 +80,14 @@
 		C584EF2020EAADB000D1652C /* CarplayNavigationTesting */ = {
 			isa = PBXGroup;
 			children = (
+				91B5F68B28A4D0B100BFE7C2 /* SceneDelegate.swift */,
 				C591530D20EBF77800330FD8 /* Views */,
 				C591530C20EBF76D00330FD8 /* ViewControllers */,
 				C584EF3B20EAB47900D1652C /* CarplayNavigationTesting.entitlements */,
 				C584EF2120EAADB000D1652C /* AppDelegate.swift */,
 				C584EF2820EAADB100D1652C /* Assets.xcassets */,
 				C584EF2D20EAADB100D1652C /* Info.plist */,
+				91B5F68D28A4D0CB00BFE7C2 /* CarPlaySceneDelegate.swift */,
 			);
 			path = CarplayNavigationTesting;
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 			files = (
 				C591531020EBF84F00330FD8 /* AppDelegate.swift in Sources */,
 				C591530E20EBF84900330FD8 /* ViewController.swift in Sources */,
+				91B5F68E28A4D0CB00BFE7C2 /* CarPlaySceneDelegate.swift in Sources */,
+				91B5F68C28A4D0B100BFE7C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +354,7 @@
 					"$(PROJECT_DIR)/../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphoneos/",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CarplayNavigationTesting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +382,7 @@
 					"$(PROJECT_DIR)/../MyCarPlayLib/DerivedData/MyCarPlayLib/Build/Products/Debug-iphoneos/",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CarplayNavigationTesting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
